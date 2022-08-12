@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "classmap": [
+      "Application"
+    ]
+  },
+  "require": {
+    "twig/twig": "^3.4",
+    "ext-mysqli": "*"
+  }
+}
