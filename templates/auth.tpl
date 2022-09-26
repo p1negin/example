@@ -25,14 +25,14 @@
         <div class = "mb-3 row">
             <label for="form-select-sm login" class="col-sm-2 col-form-label">Логин</label>
             <div class="col-sm-10">
-                <input name="login" class="form-control" placeholder="Введите логин" id="login"/>
+                <input name="login" class="form-control" placeholder="Введите логин" id="login" {% if login != null %}value="{{ login }}"{% endif %}/>
             </div>
         </div>
 
         <div class = "mb-3 row">
             <label for="form-select-sm password" class="col-sm-2 col-form-label">Пароль</label>
             <div class="col-sm-10">
-                <input name="password" type="password" class="form-control" placeholder="Введите пароль" id="password"/>
+                <input name="password" type="password" class="form-control" placeholder="Введите пароль" id="password" {% if password != null %}value="{{ password }}"{% endif %}/>
             </div>
         </div>
 
