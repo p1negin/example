@@ -14,10 +14,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/teachers">Преподаватели</a>
+                    <a class="nav-link" aria-current="page" href="/teachers">Преподаватели</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/subjects">Предметы</a>
+                    <a class="nav-link active" href="/subjects">Предметы</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout ({{ user.login }})</a>
@@ -30,7 +30,12 @@
     {% if error != null %}
     <div class="alert alert-danger">{{ error }}</div>
     {% endif %}
+
+    {% if subject %}
+    <h1>Изменить предмет</h1>
+    {% else  %}
     <h1>Создать предмет</h1>
+    {% endif %}
 
     <form method="post" action="/subjects/createAction" enctype="multipart/form-data">
         {% if subject %}

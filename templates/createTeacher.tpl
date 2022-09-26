@@ -30,7 +30,13 @@
     {% if error != null %}
         <div class="alert alert-danger">{{ error }}</div>
     {% endif %}
-    <h1>Создать преподавателя</h1>
+
+    {% if teacher %}
+        <h1>Изменить преподавателя</h1>
+    {% else  %}
+        <h1>Создать преподавателя</h1>
+    {% endif %}
+
     <form enctype="multipart/form-data" action="/teachers/createAction" method="post">
         {% if teacher %}
             <input type="hidden" name="teacherID" value="{{ teacher.id }}"/>

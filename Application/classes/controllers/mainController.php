@@ -134,7 +134,7 @@ class mainController
                     }
                 }
             }
-            $this->authPage($error_massage);
+            $this->authPage($error_massage, $_POST['login'] ?? null, $_POST['password'] ?? null);
         }
     }
 
@@ -143,9 +143,11 @@ class mainController
      * @throws SyntaxError
      * @throws LoaderError
      */
-    public function authPage(?string $errorMessage = null): void
+    public function authPage(?string $errorMessage = null, ?string $login = null, ?string $password = null): void
     {
         $data['error'] = $errorMessage;
+        $data['login'] = $login;
+        $data['passwrod'] = $password;
         echo Twig::$twig->render('auth.tpl', $data);
     }
 
