@@ -12,10 +12,10 @@ const ROOT_DIR = __DIR__;
 
 require_once ROOT_DIR . '/vendor/autoload.php';
 
-const MySQL_HOST = '';
-const MySQL_USER = '';
+const MySQL_HOST = '127.0.0.1';
+const MySQL_USER = 'root';
 const MySQL_PASS = '';
-const MySQL_BASE = '';
+const MySQL_BASE = 'project';
 
 try {
     Core::run();
